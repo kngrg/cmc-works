@@ -1,0 +1,27 @@
+a) без множителя 
+ xor eax, eax
+    xor ebx, ebx
+    xor edx, edx
+    mov ecx, n
+  f:
+     mov x[eax], al
+     mov y[ebx], ax
+     mov z[edx], eax
+     inc eax
+     add ebx, 2
+     add edx, 4
+     loop f
+     exit
+
+ с множителями
+  xor eax, eax
+    xor esi, esi
+    mov ecx, n
+  f:
+     mov x[eax], al
+     mov y[2 * eax], ax
+     mov z[4 * eax], eax
+     inc eax
+     loop f
+     exit
+
